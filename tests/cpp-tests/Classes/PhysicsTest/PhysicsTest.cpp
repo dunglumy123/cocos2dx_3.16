@@ -1095,17 +1095,17 @@ void PhysicsDemoOneWayPlatform::onEnter()
         VisibleRect::rightBottom() + Vec2(0, 50)));
     this->addChild(ground);
     
-    auto platform = makeBox(VisibleRect::center() - Vec2(0, 100), Size(200, 50));
+    auto platform = makeBox(VisibleRect::center(), Size(200, 50));
     auto platformBody = platform->getPhysicsBody();
     platformBody->setDynamic(false);
     platformBody->setContactTestBitmask(0xFFFFFFFF);
     this->addChild(platform);
     
-    auto ball = makeBall(VisibleRect::center() - Vec2(0, 50), 20, PhysicsMaterial(1, 0.0f, 0.0f));
+    auto ball = makeBall(VisibleRect::center() - Vec2(0, 50), 20);
     auto ballBody = ball->getPhysicsBody();
     ballBody->setVelocity(Vec2(0, 150));
     ballBody->setTag(DRAG_BODYS_TAG);
-    ballBody->setMass(10.0f);
+    ballBody->setMass(1.0f);
     ballBody->setContactTestBitmask(0xFFFFFFFF);
     this->addChild(ball);
     
