@@ -8,18 +8,28 @@ LOCAL_MODULE_FILENAME := libspine
 LOCAL_ARM_MODE := arm
 
 LOCAL_SRC_FILES := \
+AttachmentVertices.cpp \
+Cocos2dAttachmentLoader.cpp \
+SkeletonAnimation.cpp \
+SkeletonBatch.cpp \
+SkeletonTwoColorBatch.cpp \
+SkeletonRenderer.cpp \
+spine-cocos2dx.cpp \
 Animation.c \
+ClippingAttachment.c \
+SkeletonClipping.c \
+Triangulator.c \
+Array.c \
 AnimationState.c \
 AnimationStateData.c \
 Atlas.c \
 AtlasAttachmentLoader.c \
 Attachment.c \
 AttachmentLoader.c \
-AttachmentVertices.cpp \
 Bone.c \
 BoneData.c \
 BoundingBoxAttachment.c \
-Cocos2dAttachmentLoader.cpp \
+Color.c \
 Event.c \
 EventData.c \
 IkConstraint.c \
@@ -27,25 +37,24 @@ IkConstraintData.c \
 Json.c \
 MeshAttachment.c \
 PathAttachment.c \
+PointAttachment.c \
 PathConstraint.c \
 PathConstraintData.c \
 RegionAttachment.c \
 Skeleton.c \
-SkeletonAnimation.cpp \
-SkeletonBatch.cpp \
 SkeletonBinary.c \
 SkeletonBounds.c \
 SkeletonData.c \
 SkeletonJson.c \
-SkeletonRenderer.cpp \
 Skin.c \
 Slot.c \
 SlotData.c \
 TransformConstraint.c \
 TransformConstraintData.c \
 VertexAttachment.c \
-extension.c \
-spine-cocos2dx.cpp
+VertexEffect.c \
+extension.c
+
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/..
 
